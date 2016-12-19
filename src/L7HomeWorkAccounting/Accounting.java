@@ -5,19 +5,16 @@ package L7HomeWorkAccounting;
  */
 public class Accounting {
     public static void main(String[] args) {
-//        EmployeeMonthlyRates[] employees = new EmployeeMonthlyRates[1];
-//        employees[0] = new EmployeeMonthlyRates("Иванова Елена Львовна", "зам директора");
-        Employee empMonth = new EmployeeMonthlyRates("Иванова Елена Львовна", "зам директора", (double) 4500);
-        Employee empHour = new EmployeeHourlyRates("Вакуленко Дмитрий Владимирович", "дизайнер", (double) 100, (double) 1200);
 
-        empMonth.getMonthSalary();
-        empMonth.getYearSalary();
-        System.out.println(empMonth.name + ", " + empMonth.position + " оклад " + empMonth.getMonthSalary() + " грн в месяц");
-        System.out.println(empMonth.name + ", " + empMonth.position + " оклад " + empMonth.getYearSalary() + " грн в год");
+        Employee[] emp1 = new Employee[4];
+        emp1[0] = new EmployeeMonthlyRates("Иванова Елена Львовна", "зам директора",  4500);
+        emp1[1] = new EmployeeHourlyRates("Вакуленко Дмитрий Владимирович", "дизайнер",  100,  1200, 27.6);
+        emp1[2] = new EmployeePersentage("Коренькова Анна Павловна", "менеджер по продажам ",  50000, 690000);
+        emp1[3] = new EmployeePersAndRate("Татьяна Сергеевна", "менеджер по продажам", 1000, 50000, 690000);
 
-        empHour.getMonthSalary();
-        empHour.getYearSalary();
-        System.out.println(empHour.name + ", " + empHour.position + " оклад " + empHour.getMonthSalary() + " $ в месяц");
-        System.out.println(empHour.name + ", " + empHour.position + " оклад " + empMonth.getYearSalary() + " $ в год");
+        for (int i = 0; i < emp1.length; i++) {
+            System.out.println(emp1[i].name + ", " + emp1[i].position + " оклад " + emp1[i].getMonthSalary() + " грн в месяц");
+            System.out.println(emp1[i].name + ", " + emp1[i].position + " оклад " + emp1[i].getYearSalary() + " грн в год");
+        }
     }
 }

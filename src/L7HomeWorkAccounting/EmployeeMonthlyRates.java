@@ -7,7 +7,7 @@ public class EmployeeMonthlyRates extends Employee {
 
     double salaryPerMonth;
 
-    public EmployeeMonthlyRates(String name, String position, Double salaryPerMonth) {
+    public EmployeeMonthlyRates(String name, String position, double salaryPerMonth) {
         super(name, position);
         this.salaryPerMonth = salaryPerMonth;
     }
@@ -21,6 +21,4 @@ public class EmployeeMonthlyRates extends Employee {
     double getYearSalary() {
         return salaryPerMonth * 12;
     }
-
-
 }
